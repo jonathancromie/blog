@@ -14,7 +14,9 @@
                         @endif
                     @endunless
                     <div class="panel panel-default">
-                    <div class="panel-heading"><a href="{{ URL::to('posts/' . $post->id) }}"> {{ $post->title }} by {{ $post->name }}</a></div>
+                    <div class="panel-heading">
+                        <a href="{{ URL::to('/posts/' . $post->id) }}"> {{ $post->title }} by {{ $post->name }}</a>
+                    </div>
                     <div class="panel-body">
                         <i>{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->published_at, 'Australia/Brisbane')->toDayDateTimeString() }}</i>
                         <br /><br />
